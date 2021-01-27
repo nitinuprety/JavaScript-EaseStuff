@@ -1,6 +1,6 @@
 # JavaScript-EaseStuff
 
-Calculator, Stopwatch and Clock build with Vanilla JavaScript
+Calculator, Stopwatch and Clock built with Vanilla JavaScript
 
 ## Demo
 
