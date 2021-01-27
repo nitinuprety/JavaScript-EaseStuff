@@ -2,7 +2,7 @@
 
 Calculator, Stopwatch and Clock build with Vanilla JavaScript
 
-# Demo
+## Demo
 
 http://ease-stuff.s3-website.ap-south-1.amazonaws.com/
 
