@@ -1,0 +1,87 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+body {
+  font-family: cursive;
+  background-color: beige;
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+.calculator {
+  background-color: #a29bfe;
+  border: 1px solid #a29bfe;
+  width: 24em;
+  margin-bottom: 2em;
+  border-radius: 10px
+}
+.stopwatch {
+  background-color:  #a29bfe;
+  border: 1px solid  #a29bfe;
+  margin-bottom: 2em;
+  border-radius: 10px
+}
+.clock {
+  background-color: #a29bfe;
+  border: 1px solid #a29bfe;
+  margin-bottom: 2em;
+  border-radius: 10px
+}
+.btn-size {
+  height: 4em;
+  width: 6em;
+}
+.calc-display {
+  background-color: white;
+  border: 1px solid;
+  margin: 0;
+  text-align: end;
+  padding: 15px;
+  font-size: 2em;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.stopwatch-body {
+  background-color: white;
+  border: 1px solid;
+  padding: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.sWatch-display {
+  width: 100%;
+  padding: 20px 0;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+.clockStyle {
+  font-size: 44px;
+  color:  #2BBBAD;
+}
+.dateStyle {
+  font-size: 28px;
+  color: #FF9800;
+}
+.footer2 {
+  background-color: #26A69A;
+  padding: 1em 5em;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0"
+    />
+    <title>Ease-Stuff</title>
+
+    <!-- CSS  -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="css/materialize.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+    <link
+      href="css/style.css"
+      type="text/css"
+      rel="stylesheet"
+      media="screen,projection"
+    />
+  </head>
+  <body>
+    <nav
+      class="light-blue lighten-1"
+      style="position: fixed; z-index: 99"
+      role="navigation"
+    >
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo">Ease Stuff</a>
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a target="blank" href="https://github.com/nitinuprety"
+              ><i class="material-icons">info</i></a
+            >
+          </li>
+        </ul>
+        <a
+          target="blank"
+          href="https://github.com/nitinuprety"
+          class="sidenav-trigger"
+          ><i class="material-icons">info</i></a
+        >
+      </div>
+    </nav>
+    <div class="section no-pad-bot" style="padding-top: 6em" id="index-banner">
+      <div class="row">
+        <div class="col s12 m12 l4">
+          <div class="container stopwatch">
+            <h4 style="text-align: center; color: white; margin-bottom: 1em">
+              Stopwatch
+            </h4>
+            <div class="row center stopwatch-body">
+              <div id="stopwatch">
+                <!-- CURRENT TIME -->
+                <div id="sw-time" class="sWatch-display">00:00:00</div>
+
+                <!-- CONTROLS -->
+                <div>
+                  <a
+                    class="btn-large waves-effect waves-light"
+                    value="Reset"
+                    style="margin-bottom: 10px"
+                    id="sw-rst"
+                    >RESET</a
+                  >
+                  <a
+                    class="btn-large waves-effect waves-light orange"
+                    style="margin-bottom: 10px"
+                    value="Start"
+                    id="sw-go"
+                    >START/STOP</a
+                  >
+                </div>
+                <!-- <input type="button" value="Reset" id="sw-rst" disabled />
+                <input type="button" value="Start" id="sw-go" disabled /> -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m12 l4">
+          <div class="container calculator">
+            <h4 style="text-align: center; color: white; margin-bottom: 1em">
+              Calculator
+            </h4>
+            <div class="row center calc-display">
+              <input
+                class="displayResult"
+                style="text-align: end; background-color: white; border: none"
+                placeholder="display"
+                type="numbers"
+              />
+            </div>
+            <div class="row center calc-keys">
+              <div
+                style="
+                  flex-direction: row;
+                  display: flex;
+                  justify-content: center;
+                "
+              >
+                <a
+                  class="btn-large waves-effect waves-light btn-size"
+                  onclick="inputKey('+')"
+                  ><i class="material-icons">add</i></a
+                >
+                <a
+                  class="btn-large waves-effect waves-light btn-size"
+                  onclick="inputKey('-')"
+                  ><i class="material-icons">remove</i></a
+                >
+                <a
+                  class="btn-large waves-effect waves-light btn-size"
+                  onclick="inputKey('*')"
+                  ><i class="material-icons">close</i></a
+                >
+                <a
+                  class="btn-large waves-effect waves-light btn-size"
+                  onclick="inputKey('/')"
+                  >/</a
+                >
+              </div>
+              <div
+                style="
+                  flex-direction: row;
+                  display: flex;
+                  justify-content: center;
+                "
+              >
+                <div style="flex-direction: column; display: flex">
+                  <a
+                    class="btn-large waves-effect waves-light btn-size"
+                    onclick="inputKey('7')"
+                    >7</a
+                  >
+                  <a
+                    class="btn-large waves-effect waves-light btn-size"
+                    onclick="inputKey('8')"
+                    >8</a
+                  >
+                  <a
+                    class="btn-large waves-effect waves-light btn-size"
+                    onclick="inputKey('9')"
+                    >9</a
+                  >
+                  <a
+                    class="btn-large waves-effect waves-light btn-size"
+                    onclick="inputKey('.')"
+                    >.</a
+                  >
+                </div>
+                <div style="flex-direction: column; display: flex">
+                  <a
+                    class="btn-large waves-effect waves-light btn-size"
+                    onclick="inputKey('4')"
+                    >4</a
+                  >
+                  <a
+                    class="btn-large waves-effect waves-light btn-size"
+                    onclick="inputKey('5')"
+                    >5</a
+                  >
+                  <a
+                    class="btn-large waves-effect waves-light btn-size"
+                    onclick="inputKey('6')"
+                    >6</a
+                  >
+                  <a
+                    class="btn-large waves-effect waves-light btn-size"
+                    onclick="inputKey('0')"
+                    >0</a
+                  >
+                </div>
+                <div style="flex-direction: column; display: flex">
+                  <a
+                    class="btn-large waves-effect waves-light btn-size"
+                    onclick="inputKey('1')"
+                    >1</a
+                  >
+                  <a
+                    class="btn-large waves-effect waves-light btn-size"
+                    onclick="inputKey('2')"
+                    >2</a
+                  >
+                  <a
+                    class="btn-large waves-effect waves-light btn-size"
+                    onclick="inputKey('3')"
+                    >3</a
+                  >
+                  <a
+                    class="btn-large waves-effect waves-light btn-size"
+                    onclick="clearKey()"
+                    >CA</a
+                  >
+                </div>
+                <div>
+                  <a
+                    class="btn-large waves-effect waves-light orange"
+                    style="height: 16em; width: 6em; text-align: center"
+                    onclick="showResult()"
+                    ><i class="material-icons">drag_handle</i></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m12 l4">
+          <div class="container clock">
+            <h4 style="text-align: center; color: white; margin-bottom: 1em">
+              Clock
+            </h4>
+            <div class="row center stopwatch-body">
+              <!-- CURRENT TIME -->
+              <div class="clockStyle" id="clock"></div>
+              <div class="dateStyle" id="date"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="page-footer orange" style="padding-top: 0">
+      <div class="footer-copyright">
+        <div
+          class="container"
+          style="justify-content: space-between; display: flex"
+        >
+          <p style="text-align: left">This is an open source project.</p>
+          <p style="text-align: right">
+            Anther project
+            <a
+              target="blank"
+              class="waves-effect waves-light"
+              style="color: white"
+              href="http://pokemongallery.s3-website.ap-south-1.amazonaws.com"
+            >
+              <i class="material-icons left">star</i>
+              POKEMONE GALLERY</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
